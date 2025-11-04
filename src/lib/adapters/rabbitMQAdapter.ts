@@ -1,6 +1,6 @@
 import amqp from  'amqplib';
-import { Adapter, Message } from '../types';
-import { DEFAULT_CONFIG } from '../config';
+import { Adapter, Message } from '../types.js';
+import { DEFAULT_CONFIG } from '../config.js';
 
 export class RabbitMQAdapter<T> implements Adapter<T> {
   private url: string;

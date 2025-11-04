@@ -22,7 +22,6 @@ export const DEFAULT_CONFIG = {
   DEFAULT_RABBITMQ_PASSWORD: "guest",
   DEFAULT_RABBITMQ_VHOST: "/",
   DEFAULT_RABBITMQ_QUEUE: "temperature-readings",
- 
-};
+ };
 
 

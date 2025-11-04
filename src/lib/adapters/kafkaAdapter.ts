@@ -1,6 +1,6 @@
 import { Kafka } from 'kafkajs';
-import { DEFAULT_CONFIG} from './../config';
-import { Adapter, Message } from '../types';
+import { DEFAULT_CONFIG} from './../config.js';
+import { Adapter, Message } from '../types.js';
 
 export class KafkaAdapter<T> implements Adapter<T> {
   private kafka: Kafka;

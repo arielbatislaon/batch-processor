@@ -7,9 +7,9 @@
     "target": "ESNext",
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "allowImportingTsExtensions":true,
     "module": "ESNext",
     "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": false,
     "forceConsistentCasingInFileNames": true,
 
     /* === Type Safety === */
@@ -25,7 +25,7 @@
     "incremental": true,
     "composite": false,
     "isolatedModules": true,
-    "noEmit": true,
+    "emitDeclarationOnly": false,
 
     /* === Source Maps === */
     "sourceMap": true,

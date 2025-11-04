@@ -1,6 +1,6 @@
-import { BatchProcessor } from "./batchProcessor";
-import { BaseBatchOption } from "./lib/batch_options/baseBatchOption";
-import { BatchProcessorOptions } from "./lib/types";
+import { BatchProcessor } from "./batchProcessor.js";
+import { BaseBatchOption } from "./lib/batch_options/baseBatchOption.js";
+import { BatchProcessorOptions } from "./lib/types.js";
 
 // Example usage:
 async function main() {
@@ -14,7 +14,8 @@ async function main() {
   const createURL = "https://api.example.com/temperatures";
   const simulatedOnBatch = async (batch: DeviceReading[]) => {
     console.log(`Simulated sending batch of ${batch.length} readings to ${createURL}`)
-;
+  };  
+
   const batchProcessorOptions: BatchProcessorOptions<DeviceReading> = new BaseBatchOption();
   batchProcessorOptions.onBatch = simulatedOnBatch;
 
@@ -40,7 +41,6 @@ async function main() {
             clearInterval(myInterval);
             processor.stop();
         }, 5000);
-}
 }
 main().catch((err) => console.error("Fatal error:", err));
 

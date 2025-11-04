@@ -1,6 +1,6 @@
 import { createClient, RedisClientType } from 'redis';
-import { DEFAULT_CONFIG } from './config';
-import { CacheStore, CacheRecord } from './types';
+import { DEFAULT_CONFIG } from './config.js';
+import { CacheStore, CacheRecord } from './types.js';
 
 /**
  * In-memory implementation — fast but not persistent.

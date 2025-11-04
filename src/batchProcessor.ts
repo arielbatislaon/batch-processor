@@ -1,8 +1,8 @@
-import logger from './lib/logger';
-import { DEFAULT_CONFIG } from "./lib/config";
-import { BatchProcessorOptions, Message, TemperatureReading } from "./lib/types";
-import { BaseBatchOption } from "./lib/batch_options/baseBatchOption"
-import { InMemoryAdapter } from './lib/adapters/inMemoryAdapter';
+import logger from './lib/logger.js';
+import { DEFAULT_CONFIG } from "./lib/config.js";
+import { BatchProcessorOptions, Message, TemperatureReading } from "./lib/types.js";
+import { BaseBatchOption } from "./lib/batch_options/baseBatchOption.js"
+import { InMemoryAdapter } from './lib/adapters/inMemoryAdapter.js';
 
 /**
  * Generic, high-performance batch processor

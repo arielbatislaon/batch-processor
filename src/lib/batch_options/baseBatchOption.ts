@@ -1,7 +1,7 @@
-import { BatchProcessorOptions, Adapter, CacheStore,Message } from '../types';
-import { InMemoryAdapter } from '../adapters/inMemoryAdapter';
-import { DEFAULT_CONFIG } from '../config';
-import { InMemoryCacheStore } from "../cache";
+import { BatchProcessorOptions, Adapter, CacheStore,Message } from '../types.js';
+import { InMemoryAdapter } from '../adapters/inMemoryAdapter.js';
+import { DEFAULT_CONFIG } from '../config.js';
+import { InMemoryCacheStore } from "../cache.js";
 
 
 export class BaseBatchOption<T> implements BatchProcessorOptions<T> {

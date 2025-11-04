@@ -57,3 +57,5 @@ export interface TemperatureReading {
     value: number;
     timestamp: number;
   }
+
+  
