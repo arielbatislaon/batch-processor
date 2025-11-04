@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    /* === Output Settings === */
+    "outDir": "dist",
+    "rootDir": "src",
+     "moduleResolution": "bundler",
+    "target": "ESNext",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions":true,
+    "module": "ESNext",
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* === Type Safety === */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+
+    /* === Performance === */
+    "incremental": true,
+    "composite": false,
+    "isolatedModules": true,
+    "noEmit": true,
+
+    /* === Source Maps === */
+    "sourceMap": true,
+    "inlineSources": true,
+
+    /* === Library compatibility === */
+    "lib": ["ES2022", "DOM"],
+    "types": ["node"],
+
+    /* === Declaration files for consumers === */
+    "declaration": true,
+    "declarationMap": true,
+
+    /* === Interop === */
+    "experimentalDecorators": false,
+    "emitDecoratorMetadata": false
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "tests"]
+}

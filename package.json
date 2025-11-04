@@ -1,0 +1,67 @@
+{
+  "name": "temperature-batch-processor",
+  "version": "1.0.0",
+  "description": "High-performance, event-driven TypeScript  API library for  recording Temperature reading with Kafka, RabbitMQ, Redis Cache, and unit tests.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "test": "jest --passWithNoTests",
+    "lint": "eslint 'src/**/*.{ts,js}' --fix",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "typescript",
+    "batch-processing",
+    "event-driven",
+    "kafka",
+    "rabbitmq",
+    "redis",
+    "Cache",
+    "microservices"
+  ],
+  "author": "Ariel Batislaon",
+  "license": "ALB",
+  "dependencies": {
+    "@types/node": "^22.0.0",
+    "amqplib": "latest",
+    "esm": "^3.2.25",
+    "kafkajs": "latest",
+    "node-fetch": "^3.3.2",
+    "pino": "latest",
+    "redis": "latest",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/amqplib": "latest",
+    "@types/jest": "^29.5.5",
+    "@types/kafkajs": "latest",
+    "@types/uuid": "^10.0.0",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "eslint": "latest",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/tests/**/*.test.ts"
+    ],
+    "transformIgnorePatterns": [
+      "./node_modules/?!(uuid)/"
+    ],
+    "moduleNameMapper": {
+      "^uuid$": "C:/Users/Arielb/temperature_batch/node_modules//uuid/wrapper.mjs"
+    }
+  }
+}
