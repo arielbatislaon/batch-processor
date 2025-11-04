@@ -13,7 +13,7 @@ async function main() {
  
   const createURL = "https://api.example.com/temperatures";
   const simulatedOnBatch = async (batch: DeviceReading[]) => {
-    console.log(`Simulated sending batch of ${batch.length} readings to ${createURL}`)
+    console.log(`Simulated sending batch of ${JSON.stringify(batch)} readings to ${createURL}`)
   };  
 
   const batchProcessorOptions: BatchProcessorOptions<DeviceReading> = new BaseBatchOption();

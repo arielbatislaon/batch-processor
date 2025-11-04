@@ -2,6 +2,7 @@ import { BatchProcessorOptions, Adapter, CacheStore,Message } from '../types.js'
 import { InMemoryAdapter } from '../adapters/inMemoryAdapter.js';
 import { DEFAULT_CONFIG } from '../config.js';
 import { InMemoryCacheStore } from "../cache.js";
+import logger from '../logger.js';
 
 
 export class BaseBatchOption<T> implements BatchProcessorOptions<T> {
@@ -31,6 +32,7 @@ export class BaseBatchOption<T> implements BatchProcessorOptions<T> {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(batch),
       });
+      logger.info(`Sending batch of ${JSON.stringify(batch)} readings to ${this.createURL}`)
 
       if (!resp.ok) {
         throw new Error(`HTTP ${resp.status}: ${resp.statusText}`);
