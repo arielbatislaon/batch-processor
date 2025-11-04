@@ -14,7 +14,7 @@ const mockConnect = jest.fn().mockResolvedValue({
       close: mockClose,
     });     
 
-import { RabbitAdapter } from "../src/lib/adapters/RabbitAdapter";
+import { RabbitMQAdapter } from "../src/lib/adapters/rabbitMQAdapter";
 import { DEFAULT_CONFIG } from "../src/lib/config";
 
 
@@ -24,7 +24,7 @@ jest.mock("amqplib", () => ({
 }));
 
 describe("RabbitAdapter", () => {
-    const adapter = new RabbitAdapter({})
+    const adapter = new RabbitMQAdapter({})
  test("connects and consumes  successfully", async () => {
      await adapter.start(async (msg: { value?: any | null }) => {
          return;

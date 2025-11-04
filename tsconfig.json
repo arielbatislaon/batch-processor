@@ -11,6 +11,7 @@
     "allowSyntheticDefaultImports": true,
     "allowImportingTsExtensions": false,
     "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
 
     /* === Type Safety === */
     "strict": true,
